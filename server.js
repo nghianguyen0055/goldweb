@@ -21,7 +21,9 @@ app.get('/api/gold', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch world gold price' });
     }
 });
-
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
 // Endpoint to fetch USD rate from Vietcombank
 app.get('/api/usd-rate', async (req, res) => {
     try {
